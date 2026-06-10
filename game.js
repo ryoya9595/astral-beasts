@@ -151,11 +151,14 @@ function say(...lines){
     const typeLine=(text)=>{
       full=text; typing=true; dlgText.textContent='';
       let j=0;
-      timer=setInterval(()=>{
-        if(!typing){ clearInterval(timer); dlgText.textContent=full; return; }
+      if(timer) clearInterval(timer);
+      const t=setInterval(()=>{
+        if(timer!==t){ clearInterval(t); return; }
+        if(!typing){ clearInterval(t); dlgText.textContent=full; return; }
         dlgText.textContent=full.slice(0,++j);
-        if(j>=full.length){ typing=false; clearInterval(timer); }
+        if(j>=full.length){ typing=false; clearInterval(t); }
       },16);
+      timer=t;
     };
     const next=()=>{
       if(i>=lines.length){

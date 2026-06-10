@@ -283,3 +283,12 @@ body{
   .mon-sprite.ally-sprite{width:112px; height:112px;}
   .info-card{min-width:140px; font-size:12px;}
 }
+
+/* ---- monster sprite polish (呼吸アニメ) ---- */
+.mon-sprite.enemy-sprite{animation:enemyIn .4s ease-out, breatheE 2.6s ease-in-out .5s infinite;}
+.mon-sprite.ally-sprite{animation:allyIn .4s ease-out, breatheA 2.6s ease-in-out .5s infinite;}
+@keyframes breatheE{50%{transform:translateY(-3px)}}
+@keyframes breatheA{0%,100%{transform:scaleX(-1)}50%{transform:scaleX(-1) translateY(-3px)}}
+.mon-sprite.shake{animation:shake .35s;}
+.mon-sprite.ally-shake{animation:allyshake .35s;}
+.mon-sprite.faint{animation:faint .5s forwards;}

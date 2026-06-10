@@ -193,8 +193,8 @@ body{
 }
 .battle-field{flex:1; position:relative; min-height:270px;}
 .combatant{position:absolute; display:flex; flex-direction:column; align-items:center;}
-.combatant.enemy{top:14px; right:18px; flex-direction:row; gap:6px; align-items:flex-start;}
-.combatant.ally{bottom:8px; left:14px; flex-direction:row; gap:6px; align-items:flex-end;}
+.combatant.enemy{top:14px; left:14px; right:14px; flex-direction:row; gap:6px; align-items:flex-start; justify-content:space-between;}
+.combatant.ally{bottom:8px; left:14px; right:14px; flex-direction:row; gap:6px; align-items:flex-end; justify-content:space-between;}
 .mon-sprite{image-rendering:pixelated;}
 .mon-sprite.enemy-sprite{width:108px; height:108px; animation:enemyIn .4s ease-out;}
 .mon-sprite.ally-sprite{width:128px; height:128px; transform:scaleX(-1); animation:allyIn .4s ease-out;}
@@ -276,8 +276,10 @@ body{
 
 @media (max-width:430px){
   #console-frame{padding:10px 8px 8px; border-radius:18px;}
+  #screen{height:min(560px, 78vh);}
+  .battle-field{min-height:220px;}
   .starter-card svg{width:64px; height:64px;}
-  .mon-sprite.enemy-sprite{width:88px; height:88px;}
-  .mon-sprite.ally-sprite{width:104px; height:104px;}
+  .mon-sprite.enemy-sprite{width:96px; height:96px;}
+  .mon-sprite.ally-sprite{width:112px; height:112px;}
   .info-card{min-width:140px; font-size:12px;}
 }

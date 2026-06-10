@@ -906,7 +906,7 @@ async function eventCity(){
   await say('ヴォイド団は エネルギーを あきらめて てったいしていった！',
     'まちに あかりが もどった。',
     'けいびいん「ありがとう！ きみは まちの えいゆうだ！」',
-    '守人ミナトが ジムで まっている。');
+    '守人ミナトが どうじょうで まっている。');
   G.flags.raimeiClear=true;
   save();
   renderLocation();
